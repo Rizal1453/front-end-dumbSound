@@ -28,7 +28,7 @@ const AddArtis = () => {
           Authorization: `Bearer ${localStorage.token}`,
         },
       });
-      console.log(response);
+   
       setLoading(true)
       Success({ message: `Success!` });
       navigate("/add-music");
