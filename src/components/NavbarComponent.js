@@ -18,7 +18,7 @@ const NavbarComponent = () => {
   const [state, dispatch] = useContext(LoginContext);
   const loginsukses = state.isLogin;
 
-  console.log(loginsukses);
+
 
 
   const [showLogin, setShowLogin] = useState(false);

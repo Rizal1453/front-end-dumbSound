@@ -44,8 +44,7 @@ const Login = ({
       Error({ message: `Login Failed!` });
     }
   });
-  console.log(state);
-  console.log(state.user.role, "admin apa user");
+
   const [statusMessage, setStatusMessage] = useState("");
 
   function loginSukses(email, passsword) {

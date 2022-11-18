@@ -50,26 +50,6 @@ const Playlist = () => {
     });
   };
 
-  // const a
-  // function cek(a,b) {
-  //   if (a === b ) {
-  //     console.log("horreeee");
-  //   }else{
-  //     console.log("bangsaddd");
-  //   }
-
-  // }
-
-  // cek()
-  // const { data: trans } = useQuery("transCache", async () => {
-  //   const id = state.user.id;
-  //   const response = await API.get("/ftransaction");
-  //   const responbyid = response?.data.data.filter((p) => p.userid === id);
-  //   console.log("byiid", responbyid);
-
-  //   console.log(response, "keluuuuuaaaar doong");
-  //   return responbyid;
-  // });
 
   const [trans, setTrans] = useState([]);
   const id = state.user.id;
@@ -80,26 +60,14 @@ const Playlist = () => {
     try {
       const response = await API.get("/ftransaction");
       const responbyid = response?.data.data.filter((p) => p.user.id === id);
-      console.log("byiid", responbyid);
       setTrans(responbyid);
     } catch (error) {
       console.log(error);
     }
   };
 
-  // const getTransaction = async () => {
-  //   try {
-  //     const id = state.user.id
-  //     const response = await API.get("/ftransaction");
-  //     const responbyid = response.data.data.filter((p)=> p.userid===id)
-  //     setTransaction(responbyid);
-  //     console.log(response, "keluuuuuaaaar doong");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // console.log("user id :", userId);
-  console.log(trans, "byyyyyyyyyyyyyyyyyy id");
+
+
 
   const getData = async () => {
     try {
@@ -111,8 +79,7 @@ const Playlist = () => {
     }
   };
 
-  // useEffect(() => {
-  // }, []);
+ 
 
   useEffect(() => {
     getData();
