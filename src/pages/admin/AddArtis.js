@@ -23,7 +23,7 @@ const AddArtis = () => {
   const handleSubmit = useMutation(async (e) => {
     try {
       e.preventDefault();
-      const response =await API.post("/createartis", form, {
+      await API.post("/createartis", form, {
         headers: {
           Authorization: `Bearer ${localStorage.token}`,
         },
