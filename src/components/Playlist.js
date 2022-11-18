@@ -94,7 +94,7 @@ const Playlist = () => {
       <div className="my-5 color-orens text-center ">
       <h2>Dengarkan Dan Rasakan</h2>
       </div>
-      {loading? (<h2 className="text-white bg-danger">loading...</h2> ):(
+      {loading? (<h2 className="text-white">loading...</h2> ):(
         <div className="row ">
           {data?.map((item) => (
             <div className="col-lg-3 col-12 mb-lg-3 mb-3">
