@@ -14,14 +14,14 @@ const AddMusic = () => {
   const [loading, setLoading] = useState(false);
 
   const [form, setForm] = React.useState();
-  console.log(form);
+ 
   const handleChanges = (e) => {
     setForm({
       ...form,
       [e.target.name]:
         e.target.type === "file" ? e.target.files : e.target.value,
     });
-    console.log(form);
+   
 
     if (e.target.type === "file") {
       let url = URL.createObjectURL(e.target.files[0]);
