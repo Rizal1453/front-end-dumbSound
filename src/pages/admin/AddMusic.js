@@ -49,9 +49,9 @@ const AddMusic = () => {
       formData.set("song", form.song[0], form.song[0].name);
       console.log(form);
 
-      await API.post("/createsong", formData);
+     const response = await API.post("/createsong", formData);
       setLoading(true);
-
+    console.log(response);
       navigate("/");
       Success({ message: `succes` });
     } catch (error) {
