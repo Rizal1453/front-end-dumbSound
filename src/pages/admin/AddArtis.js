@@ -23,11 +23,12 @@ const AddArtis = () => {
   const handleSubmit = useMutation(async (e) => {
     try {
       e.preventDefault();
-      await API.post("/createartis", form, {
+      const response =await API.post("/createartis", form, {
         headers: {
           Authorization: `Bearer ${localStorage.token}`,
         },
       });
+      console.log(response);
       setLoading(true)
       Success({ message: `Success!` });
       navigate("/add-music");
