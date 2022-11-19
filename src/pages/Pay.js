@@ -120,8 +120,8 @@ function Pay() {
               {" "}
               <span className="text-danger ms-1">DUMB</span>
               <span className="text-white">SOUND : 0981312323</span>
-               <GlobalButton text="Send" style={{ width: "300px" }} onClick={()=>navigate("/")}/>
-            </p>
+              </p>
+              <GlobalButton text="Go to home" style={{ width: "300px" }} onClick={()=>navigate("/")}/>
 
           </div>
       
