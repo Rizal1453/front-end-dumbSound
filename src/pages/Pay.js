@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useMutation } from "react-query";
+import { useNavigate } from "react-router-dom";
 import GlobalButton from "../components/Button";
 import { LoginContext } from "../components/LoginContext";
 import NavbarComponent from "../components/NavbarComponent";
 import { API } from "../config/api";
 
 function Pay() {
+  const navigate = useNavigate()
   useEffect(() => {
     //change this to the script source you want to load, for example this is snap.js sandbox env
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
@@ -118,6 +120,7 @@ function Pay() {
               {" "}
               <span className="text-danger ms-1">DUMB</span>
               <span className="text-white">SOUND : 0981312323</span>
+               <GlobalButton text="Send" style={{ width: "300px" }} onClick={()=>navigate("/")}/>
             </p>
 
           </div>
